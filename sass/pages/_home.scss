@@ -13,14 +13,34 @@
     &__aside {
         flex: 0 0 18%;
         background-color: var(--color-gray-dark-1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    
-    &__navigation {
+
+    &__legal {
+        padding: 2rem;
+        color: var(--color-gray-light-4);
+        font-size: 1.2rem;
+        text-align: center;
+
+        &-link {
+            &:link,
+            &:visited {                
+                color: var(--color-primary-light);
+                text-decoration: none;
+            }
+            
+            &:hover {
+                color: var(--color-primary-dark);
+            }
+        }
     }
     
     &__main {
         flex: 1;
         background-color: orangered;
+        height: 50rem;
     }
 }
 
