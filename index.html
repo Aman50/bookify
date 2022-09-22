@@ -5,12 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Bookify &mdash; One stop solution for your next vacation</title>
     </head>
     <body>
-        
+        <div class="container">
+            <header class="header">
+                <img src="./img/logo.png" alt="Bookify logo" class="header__logo">
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Search hotels">
+                    <button class="search__button">
+                        <svg class="search__icon">
+                            <use href="./img/symbol-defs.svg#icon-magnifying-glass" xlink:href="./img/symbol-defs.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+                <nav class="user-nav">
+                    <div class="user-nav__div">
+                        <svg class="user-nav__icon">
+                            <use href="./img/symbol-defs.svg#icon-bookmark" xlink:href="./img/symbol-defs.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__badge">7</span>
+                    </div>
+                    <div class="user-nav__div">
+                        <svg class="user-nav__icon">
+                            <use href="./img/symbol-defs.svg#icon-chat" xlink:href="./img/symbol-defs.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__badge">12</span>
+                    </div>
+                    <div class="user-nav__div">
+                        <img src="./img/user-3.jpg" alt="Logged in user photo" class="user-nav__photo">
+                        <span class="user-nav__user-name">Aman</span>
+                    </div>
+                </nav>
+            </header>
+            <div class="body">
+                <aside class="body__aside">
+                    <nav class="body__navigation">Navigation</nav>
+                </aside>
+                <main class="body__main">Main</main>
+            </div>
+        </div>
     </body>
 </html>
