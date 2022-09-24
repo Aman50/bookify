@@ -1,0 +1,58 @@
+.overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .2rem solid var(--color-gray-light-2);
+
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 300;
+        padding: 1.5rem 3rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+
+    &__star {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--color-primary);
+
+        &-location {
+            margin-right: .5rem;
+        }
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    &__rating {
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        color: white;
+        background-color: var(--color-primary);
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-points {
+            font-size: 2.25rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        &-votes {
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+    }
+}
