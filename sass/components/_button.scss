@@ -10,11 +10,21 @@
     cursor: pointer;
     transition: all .2s;
 
+    span {
+        margin-left: .5rem;
+        transition: margin-left .4s;
+    }
+
     &:hover {
         color: var(--color-black);
+
+        span {
+            margin-left: .8rem;
+        }
     }
 
     &:focus {
+        outline: none;
         animation: pulsate 1s infinite;
     }
 }
@@ -35,4 +45,50 @@
         box-shadow: none;
 
     }
+}
+
+.btn {
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    border: none;
+    border-radius: 10rem;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+
+    &__invisible {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        padding: 2rem 0;
+        transition: all .2s;
+    }
+    
+    &__visible {
+        display: inline-block;
+        padding: 2rem 7.5rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+
 }

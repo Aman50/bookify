@@ -46,6 +46,7 @@
 .content {
     display: flex;
     padding: 4.5rem;
+    font-size: 1.4rem;
     background-color: var(--color-gray-light-2);
     border-bottom: var(--line-light);
 }
@@ -54,7 +55,6 @@
     flex: 0 0 60%;
     background-color: var(--color-white);
     margin-right: 3rem;
-    font-size: 1.4rem;
     box-shadow: var(--box-shadow-light);
     padding: 3rem;
 }
@@ -74,9 +74,6 @@
     color: var(--color-gray-dark-3);
     margin: 1rem 0;
 
-    &__text {
-
-    }
 
     &__user-img {
         height: 4rem;
@@ -91,7 +88,21 @@
 
 .user-reviews {
     flex: 1;
-    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+    }
 }
 
 
