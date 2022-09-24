@@ -1,0 +1,36 @@
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: var(--line-light);
+    border-bottom: var(--line-light);
+    margin: 3rem 0;
+    padding: 3rem 0;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1.75rem;
+            width: 1.75rem;
+            margin-right: .7rem;
+
+            background-image: url('../img/SVG/chevron-small-right.svg');
+            background-size: cover;
+
+            @supports(--webkit-mask-image: url('../img/SVG/chevron-small-right.svg')) {
+                background-image: none;
+                background-color: var(--color-primary);
+                -webkit-mask-image: url('../img/SVG/chevron-small-right.svg');
+                -webkit-mask-size: cover;
+                mask-image: url('../img/SVG/chevron-small-right.svg');
+                mask-size: cover;
+            }
+        }
+    }
+}
