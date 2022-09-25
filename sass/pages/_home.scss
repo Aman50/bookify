@@ -3,11 +3,20 @@
     margin: 8rem auto;
     box-shadow: var(--box-shadow);
     background-color: var(--color-gray-light-2);
+
+    @include respond($tab-landscape) {
+        margin: 0;
+    }
 }
 
 
 .body {
     display: flex;
+
+    
+    @include respond($tab-portrait) {
+        flex-direction: column;
+    }
 
     &__aside {
         flex: 0 0 18%;
@@ -22,6 +31,11 @@
         color: var(--color-gray-light-4);
         font-size: 1.2rem;
         text-align: center;
+
+        
+    @include respond($tab-portrait) {
+        display: none;
+    }
 
         &-link {
             &:link,
@@ -48,6 +62,15 @@
     font-size: 1.4rem;
     background-color: var(--color-gray-light-2);
     border-bottom: var(--line-light);
+
+    @include respond($tab-portrait) {
+        padding: 2rem;
+    }
+
+    @include respond($phone) {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
 }
 
 .description {
@@ -56,6 +79,15 @@
     margin-right: 3rem;
     box-shadow: var(--box-shadow-light);
     padding: 3rem;
+
+    @include respond($tab-portrait) {
+        padding: 2rem;
+    }
+
+    @include respond($phone) {
+        margin-right: 0;
+        margin-bottom: 3.5rem;
+    }
 }
 
 .paragraph {
@@ -72,6 +104,10 @@
     font-size: 1.3rem;
     color: var(--color-gray-dark-3);
     margin: 1rem 0;
+
+    &__users {
+        display: flex;
+    }
 
 
     &__user-img {
@@ -96,11 +132,20 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @include respond($phone) {
+        padding: 2rem 0;
+    }
+
     &__text {
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: 300;
         margin-bottom: 2.5rem;
+
+        @include respond($phone) {
+            font-size: 1.75rem;
+            margin-bottom: 1.75rem;
+        }
     }
 }
 

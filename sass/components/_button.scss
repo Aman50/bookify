@@ -49,6 +49,9 @@
 
 .btn {
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 300;
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
     border: none;
     border-radius: 10rem;

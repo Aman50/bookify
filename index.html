@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <!-- <link rel="stylesheet" href="css/styles.css"> -->
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Bookify &mdash; One stop solution for your next vacation</title>
@@ -85,9 +86,22 @@
                 </aside>
                 <main class="body__main">
                     <div class="gallery">
-                        <picture class="gallery__item"><img src="./img/hotel-1.jpg" alt="Photo of Hotel 1" class="gallery__img"></picture>
-                        <picture class="gallery__item"><img src="./img/hotel-2.jpg" alt="Photo of Hotel 2" class="gallery__img"></picture>
-                        <picture class="gallery__item"><img src="./img/hotel-3.jpg" alt="Photo of Hotel 3" class="gallery__img"></picture>
+                        <picture class="gallery__item gallery__item-1">
+                            <img
+                            srcset="./img/hotel-1-1x.jpg 750w, ./img/hotel-1-2x.jpg 1500w"
+                            sizes="(max-width: 37.5em) 50vw, 33vw"
+                            src="./img/hotel-1-2x.jpg" alt="Photo of Hotel 1" class="gallery__img gallery__img-1">
+                        </picture>
+                        <picture class="gallery__item gallery__item-2">
+                            <img
+                            srcset="./img/hotel-2-1x.jpg 750w, ./img/hotel-2-2x.jpg 1500w"
+                            sizes="(max-width: 37.5em) 50vw, 33vw"
+                            src="./img/hotel-2-2x.jpg" alt="Photo of Hotel 2" class="gallery__img gallery__img-2"></picture>
+                        <picture class="gallery__item gallery__item-3">
+                            <img
+                            srcset="./img/hotel-3-1x.jpg 750w, ./img/hotel-3-2x.jpg 1500w"
+                            sizes="(max-width: 37.5em) 50vw, 33vw"
+                            src="./img/hotel-3-2x.jpg" alt="Photo of Hotel 3" loading="lazy" class="gallery__img gallery__img-3"></picture>
                     </div>
                     <div class="overview">
                         <h1 class="overview__title">
@@ -164,10 +178,10 @@
                                 <p class="recommended__text">Mandeep and 3 other friends recommend this hotel.
                                 </p>
                                 <div class="recommended__users">
-                                    <img src="./img/user-2.jpg" alt="User 1" class="recommended__user-img">
-                                    <img src="./img/user-4.jpg" alt="User 2" class="recommended__user-img">
-                                    <img src="./img/user-5.jpg" alt="User 3" class="recommended__user-img">
-                                    <img src="./img/user-6.jpg" alt="User 4" class="recommended__user-img">
+                                    <img src="./img/user-2.jpg" alt="User 1" loading="lazy" class="recommended__user-img">
+                                    <img src="./img/user-4.jpg" alt="User 2" loading="lazy" class="recommended__user-img">
+                                    <img src="./img/user-5.jpg" alt="User 3" loading="lazy" class="recommended__user-img">
+                                    <img src="./img/user-6.jpg" alt="User 4" loading="lazy" class="recommended__user-img">
                                 </div>
                             </div>
                         </div>
@@ -177,7 +191,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
                                 </blockquote>
                                 <figcaption class="user-review__caption">
-                                    <img src="./img/user-1.jpg" alt="User 1 Review" class="user-review__img">
+                                    <img src="./img/user-1.jpg" alt="User 1 Review" loading="lazy" class="user-review__img">
                                     <div class="user-review__about">
                                         <p class="user-review__about-name">Jerry</p>
                                         <p class="user-review__about-date">Sept 24, 2022</p>
@@ -191,7 +205,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
                                 </blockquote>
                                 <figcaption class="user-review__caption">
-                                    <img src="./img/user-6.jpg" alt="User 2 review" class="user-review__img">
+                                    <img src="./img/user-6.jpg" alt="User 2 review" loading="lazy" class="user-review__img">
                                     <div class="user-review__about">
                                         <p class="user-review__about-name">Elaine</p>
                                         <div class="user-review__about-date">Sept 30th, 2022</div>

@@ -6,6 +6,10 @@
     position: relative;
     overflow: hidden;
 
+    @include respond($phone) {
+        padding: 2rem;
+    }
+
     &::before {
         content: "\201C";
         display: inline-block;

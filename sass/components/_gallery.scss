@@ -5,4 +5,10 @@
         width: 100%;
         display: block;
     }
+
+    &__item-3 {
+        @include respond($phone) {
+            display: none;
+        }
+    }
 }

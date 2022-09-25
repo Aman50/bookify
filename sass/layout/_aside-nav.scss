@@ -1,8 +1,17 @@
 .aside-nav {
     margin-top: 2.5rem;
 
+    
+    @include respond($tab-portrait) {
+        margin-top: 0;
+    }
+
     &__list {
         list-style: none;
+
+        @include respond($tab-portrait) {
+            display: flex;
+        }
     }
     
     &__item {
@@ -11,6 +20,10 @@
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @include respond($tab-portrait) {
+                margin-bottom: 0rem;
+            }
         }
 
         &::before {
@@ -55,6 +68,12 @@
             align-items: center;
             position: relative;
             z-index: 1;
+
+            @include respond($phone) {
+                flex-direction: column;
+                padding: .75rem 1.5rem;
+                font-size: 1.2rem;
+            }
         }
     }
 
@@ -63,5 +82,12 @@
         width: 1.75rem;
         margin-right: 1.75rem;
         fill: currentColor;
+
+        @include respond($phone) {
+            margin-right: 0;
+            margin-bottom: .6rem;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
     }
 }

@@ -1,4 +1,6 @@
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/functions";
 
 @import "./base/reset";
 @import "./base/typography";
@@ -14,4 +16,5 @@
 @import "components/user_review";
 
 @import "./pages/home";
+
 

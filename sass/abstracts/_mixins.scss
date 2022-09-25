@@ -1,0 +1,15 @@
+@mixin respond($screen-size-in-px) {
+    $screen-size-in-em: calc($screen-size-in-px / 16px * 1em);
+    
+    @if ($screen-size-in-px == $big-screen) {
+        @media only screen and (min-width: $screen-size-in-em) {
+            @content;
+        }
+    }
+
+    @if ($screen-size-in-px != $big-screen) {
+        @media only screen and (max-width: $screen-size-in-em) {
+            @content;
+        }
+    }
+}

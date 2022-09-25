@@ -10,6 +10,12 @@
         padding: 1.5rem 3rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @include respond($phone) {
+            font-size: 1.75rem;
+            padding: 1.5rem .75rem;
+            flex: 1;
+        }
     }
 
     &__star {
@@ -31,6 +37,10 @@
         display: flex;
         align-items: center;
         font-size: 1.2rem;
+
+        @include respond($phone) {
+            margin-left: 1rem;
+        }
     }
 
     &__rating {
@@ -44,15 +54,25 @@
         justify-content: center;
         align-items: center;
 
+        @include respond($phone) {
+            margin-left: .5rem;
+            padding: 0 1rem;
+        }
+
         &-points {
             font-size: 2.25rem;
             font-weight: 300;
             text-align: center;
+
+            @include respond($phone) {
+                font-size: 1.75rem;
+            }
         }
 
         &-votes {
-            font-size: .8rem;
+            font-size: 1rem;
             text-transform: uppercase;
+            text-align: center;
         }
     }
 }
